@@ -1,0 +1,47 @@
+<% include ../partials/header %>
+
+
+	<div class="row justify-content-center">
+		
+		<div class="col-md-12 text-center">
+			<h1>
+				Create a New Recordshop
+			</h1>
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-4">
+			<form action="/recordshops" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input class="form-control" type="text" name="name" placeholder="name">
+				</div>
+				<div class="form-group">
+					<label for="image">Image Url(Not Working,Upload Image instead)</label>
+					<input class="form-control" type="text" name="image1" placeholder="image url">
+				</div>
+				<div class="form-group">
+					<label for="image">Image</label>
+					<input type="file" id="image" name="image" accept="image/*">
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input class="form-control" type="text" name="description" placeholder="description">
+				</div>
+				<div class="form-group">
+					<label for="price">Price</label>
+					<input class="form-control" type="text" name="price" placeholder="price range in SEK">
+				</div>
+				<div class="form-group">
+                  <label for="location">Location</label>
+                  <input class="form-control" type="text" name="location" id="location" placeholder="location">
+                </div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Submit</button>
+				</div>
+			</form>
+			<a href="/recordshops">Go Back</a>
+		</div>
+		
+	</div>
+
+
+<% include ../partials/footer %>

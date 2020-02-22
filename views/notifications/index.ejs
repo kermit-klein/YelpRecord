@@ -1,0 +1,15 @@
+<% include ../partials/header %> 
+
+<h1>Notifications</h1>
+
+<ul>
+	<% allNotifications.forEach(function(notification) { %>
+	<li>
+		<a href="/recordshops/<%= notification.recordshopId %>">
+			<%= notification.username %> created a new recordshop %>
+		</a>
+	</li>
+	<% }); %>
+</ul>
+
+<% include ../partials/footer %> 

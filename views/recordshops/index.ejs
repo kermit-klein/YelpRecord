@@ -1,0 +1,74 @@
+<% include ../partials/header %>
+
+<% if(currentUser && currentUser.isAdmin) { %>
+	<h2>You're an Admin</h2>
+<% } %>
+
+<header class="jumbotron" style="margin-bottom:0">
+	<div class="container">
+		<h1>
+		<img src="https://image.flaticon.com/icons/svg/2469/2469203.svg" width="100" height="100" alt="Italian Trulli"> Welcome to YelpRecord!
+		</h1>
+		<p>
+		View our hand-picked recordshops from all over the world
+		</p>
+		<p>
+			<a class="btn btn-primary btn-lg" href="/recordshops/new">Add a new Recordshop</a>
+		</p>
+		<p>
+			<form action="/recordshops" method="GET" class="form-inline">
+				<div class="form-group">
+					<input type="text" name="search" placeholder="Recordshop search..." class="form-control">
+					<input type="submit" value="Search" class="btn btn-default">
+				</div>
+		    </form>
+		</p>
+	</div>
+</header>
+
+	<div class="row" >
+		<div class="col-lg-12">
+			<h3>
+				Our Most Popular Recordshops!
+			</h3>		
+		</div>
+	</div>
+
+	<div class="row text-center" id="recordshop-grid">
+		
+	<div class="col-md-12">
+		<% if(noMatch !== undefined) { %>
+		 <h3>
+			  <%= noMatch %>
+		</h3>
+		<%}%>
+		</div>
+		<% recordshops.forEach( (recordshop) => { %>
+		    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">				
+				<div class="card" >
+				 <img style="object-fit:cover; height:200px !important ; width: 100%" src="<%=recordshop.image%>" class="card-img-top" alt="<%= recordshop.name%>">
+				  <div class="card-body">
+					<h5 class="card-title"><%= recordshop.name %></h5>
+					    <div>
+                           <span class="badge badge-pill badge-secondary"><i class="fas fa-thumbs-up"></i> <%= recordshop.likes.length %></span>
+                       </div>
+					  
+					 <% if (recordshop.rating === 0) { %>
+                    <em>No reviews yet.</em>
+                    <% } else { %>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star <% if (recordshop.rating > 1.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (recordshop.rating > 2.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (recordshop.rating > 3.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (recordshop.rating > 4.5) { %> checked <% } %>"></span>
+                    <% } %>
+					  
+					  
+					<a href="/recordshops/<%=recordshop._id%>" class="btn btn-primary btn-sm">More Info</a>
+				</div>
+            </div>	
+			</div>
+		<% }) %>
+
+<!-- style="object-fit:cover; height:250px !important ; width: 100%" DEĞİŞİK BİŞİ-->
+<% include ../partials/footer %>
