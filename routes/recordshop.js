@@ -6,6 +6,7 @@ var middleware = require("../middleware")
 var Notification = require("../models/notification")
 var User     = require("../models/user")
 var Review = require("../models/review")
+var Comment = require("../models/comment")
 
 var NodeGeocoder = require('node-geocoder');
  
@@ -211,13 +212,13 @@ router.delete("/:id",middleware.checkRecordshopOwnership, (req,res)=> {
 			res.redirect("/recordshops")
 		} try {
 			await cloudinary.v2.uploader.destroy(deletedrecordshop.imageId)
-			await Comment.remove({"_id": {$in: deletedrecordshop.comments}})
-			await Review.remove({"_id": {$in: deletedrecordshop.reviews}})
+			await Comment.deleteMany({"_id": {$in: deletedrecordshop.comments}})
+			await Review.deleteMany({"_id": {$in: deletedrecordshop.reviews}})
 			res.redirect("/recordshops")
 		} catch(err) {
 			if(err) {
 				req.flash("error",err.message)
-				return res.redirect("back")
+				return res.redirect("/recordshops")
 			}
 		}
 	})
