@@ -101,6 +101,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 
 
-app.listen(3000, function() { 
-  console.log('Server listening on port 3000')
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log("Server Has Started!");
 })
