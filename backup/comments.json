@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5e4d7e64a1f5e50166a741ad"},"text":"When do they open ?","createdAt":{"$date":"2020-02-19T18:28:52.401Z"},"__v":0,"author":{"id":{"$oid":"5e4d7e29a1f5e50166a741aa"},"username":"aler"}}
+{"_id":{"$oid":"5e4d91aea1f5e50166a741b9"},"text":"is this a new shop?","createdAt":{"$date":"2020-02-19T19:51:10.226Z"},"__v":0,"author":{"id":{"$oid":"5e4d216fae6d8a14957baee1"},"username":"allezz"}}
+{"_id":{"$oid":"5e4f952be745e001ab8c09af"},"text":"123","createdAt":{"$date":"2020-02-21T08:30:35.304Z"},"__v":0,"author":{"id":{"$oid":"5e4f93ade745e001ab8c09ab"},"username":"zajshdawqwe"}}
+{"_id":{"$oid":"5e517934b377ec47668b41d2"},"text":"h","createdAt":{"$date":"2020-02-22T18:55:48.159Z"},"__v":0,"author":{"id":{"$oid":"5e4d216fae6d8a14957baee1"},"username":"allezz"}}
