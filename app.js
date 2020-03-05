@@ -64,14 +64,18 @@ mongoose.set('useUnifiedTopology', true)
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true);
-mongoose.connect("mongodb+srv://allezz:"+process.env.MONGODBPASS+"@allezz-80gfb.mongodb.net/test?retryWrites=true&w=majority", {
-	useNewUrlParser:true,
-	useCreateIndex:true
-}).then(()=>{
-	console.log("MongoDB Connected")
-}).catch(err=>{
-	console.log("ERROR:",err.message)
-})
+
+
+// mongoose.connect("mongodb+srv://allezz:"+process.env.MONGODBPASS+"@allezz-80gfb.mongodb.net/test?retryWrites=true&w=majority", {
+// 	useNewUrlParser:true,
+// 	useCreateIndex:true
+// }).then(()=>{
+// 	console.log("MongoDB Connected")
+// }).catch(err=>{
+// 	console.log("ERROR:",err.message)
+// })
+
+mongoose.connect(process.env.DATABASEURL)
 
 
 app.use(express.static(__dirname +"/public"))
