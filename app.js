@@ -60,19 +60,6 @@ app.use("/recordshops/:id/comments",commentRoutes)
 app.use("/recordshops/:id/reviews", reviewRoutes)
 
 
-var recordshops = [ 
-		{name:"Devon", image:"https://assets.bedful.com/images/769103625cb3dea535b0988144a3412799fc2052/large.jpg" },
-		{name:"Grand Teton", image:"https://i.redd.it/x1ymbdka89r11.jpg" },
-		{name:"Sonoma", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEFaBfdbd7bo3abnkvK2xqx6ik9O1jYxXqOj3t7MTji4fnV7Jv&s" },
-		{name:"Devon", image:"https://assets.bedful.com/images/769103625cb3dea535b0988144a3412799fc2052/large.jpg" },
-		{name:"Grand Teton", image:"https://i.redd.it/x1ymbdka89r11.jpg" },
-		{name:"Sonoma", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEFaBfdbd7bo3abnkvK2xqx6ik9O1jYxXqOj3t7MTji4fnV7Jv&s" },
-		{name:"Devon", image:"https://assets.bedful.com/images/769103625cb3dea535b0988144a3412799fc2052/large.jpg" },
-		{name:"Grand Teton", image:"https://i.redd.it/x1ymbdka89r11.jpg" },
-		{name:"Sonoma", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEFaBfdbd7bo3abnkvK2xqx6ik9O1jYxXqOj3t7MTji4fnV7Jv&s" }
-		]
-
-
 mongoose.set('useUnifiedTopology', true)
 mongoose.set('useNewUrlParser', true)
 mongoose.set('useFindAndModify', false)
@@ -85,21 +72,6 @@ mongoose.connect("mongodb+srv://allezz:"+process.env.MONGODBPASS+"@allezz-80gfb.
 }).catch(err=>{
 	console.log("ERROR:",err.message)
 })
-
-//Mongodb schema setup
-
-
-
-// Recordshop.create({
-// 	name:"Devon", image:"https://assets.bedful.com/images/769103625cb3dea535b0988144a3412799fc2052/large.jpg",
-// description:"Best Recordshop in South England"
-// },  function(err,cat) {
-// 	if (err) {
-// 		console.log(err)
-// 	} else {
-// 		console.log(cat)
-// 	}
-// })
 
 
 app.use(express.static(__dirname +"/public"))
