@@ -98,8 +98,22 @@ Add suppot for osmServer option
 
 - Fix tom tom geocoder to use new API.
 - Fix production endpoint
-- Drop node 4 support
+- Drop node 4 and 6 support
 
 # 3.25.0
 
 - support yandex api Key
+
+# 3.25.1
+
+- fix yander parameter usage
+
+# 3.26.0
+
+- Introduce fetch option.
+- Deprecate httpAdapters.
+
+# 3.27,0
+
+- Update here geocoder to support `apiKey`
+- Allow passing of limit parameter to opendatafrance
