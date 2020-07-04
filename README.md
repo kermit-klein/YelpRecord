@@ -42,3 +42,6 @@ App is deployed to Heroku, both front and backend works from there.
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"
+
+### License
+MIT License
