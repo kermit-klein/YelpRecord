@@ -1,5 +1,7 @@
 # YelpCamp
 
+![Img](https://i.imgur.com/ow6j41v.png)
+
 ### Author
 [Ali Erbay](https://github.com/kermit-klein)
 
