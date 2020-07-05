@@ -1,4 +1,4 @@
-# YelpCamp
+# YelpRecord
 
 ![Img](https://i.imgur.com/ow6j41v.png)
 
@@ -48,6 +48,7 @@ App is deployed to Heroku, both front and backend works from there.
 ### Updates/Improvements
 - Add more styling
 - Make it more responsive
+- Code *NEEDS* refactoring
 
 ### License
 MIT License
