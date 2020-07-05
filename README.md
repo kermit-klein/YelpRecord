@@ -13,7 +13,7 @@
 
 Inspired fron VinylHub, this web app lets you post record shops and display on the app. You can do all CRUD actions on posts as long as you own the post.
 App is connected to Google Maps API to show record shops on map. You can rate and leave comments for record shops.
-Passport package manages all user registrations and login sessions. Image uploads are done to Cloudinary image cloud and app connects to MongoDB which runs on their cloud.
+Passport package manages all user registrations and login sessions. Image uploads are done to Cloudinary image cloud and app connects to MongoDB which runs on their cloud. App offers forgot password functionality.
 App is deployed to Heroku, both front and backend works from there.
 
 ### Built With
