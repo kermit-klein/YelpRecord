@@ -1,6 +1,5 @@
 <% include ../partials/header %>
 
-
 	<div class="row">
 		<div class="col-md-3">
 			<p class="lead">YelpRecord</p>
@@ -24,12 +23,10 @@
         <span class="float-right">Total likes: <i class="fas fa-thumbs-up"></i> <%=recordshop.likes.length %></span>
             </button>
                      
-				
-				
-				
+
 					<p><em>Submitted by <a href="/users/<%= recordshop.author.id%>"><%= recordshop.author.username %></a>, <%= moment(recordshop.createdAt).fromNow() %> </em></p>
 				<hr>
-				    <div style="pb-2">
+				    <div class="pb-2">
                         <form action="/recordshops/<%= recordshop._id %>/like" method="POST">
                             <div class="btn-group">
                                 <% if (currentUser && recordshop.likes.some(function (like) {
@@ -263,8 +260,7 @@
 		
 		
 		
-		
-		
+	
 	
 <!-- Recordshop Likes Modal -->
 <div id="recordshopLikes" class="modal fade" role="dialog">
@@ -307,8 +303,8 @@
 
 	<script>
   function initMap() {
-    var lat = <%= recordshop.lat %>;
-    var lng = <%= recordshop.lng %>;
+    var lat = recordshop.lat ;
+    var lng = recordshop.lng ;
     var center = {lat: lat, lng: lng };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
